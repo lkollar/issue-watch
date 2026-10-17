@@ -1,0 +1,7 @@
+recipient = "you@example.com"
+sender = "issue-watch@example.com"
+sendmail = "/run/wrappers/bin/sendmail"
+
+[[watches]]
+name = "Project bugs"
+query = "repo:owner/project is:issue state:open label:bug"
