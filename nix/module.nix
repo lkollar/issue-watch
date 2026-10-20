@@ -32,7 +32,7 @@ in
     };
     onCalendar = lib.mkOption {
       type = lib.types.str;
-      default = "*-*-* 08,20:00:00";
+      default = "hourly";
       description = "Polling schedule in the machine's local timezone.";
     };
   };
@@ -69,7 +69,7 @@ in
       };
     };
     systemd.timers.issue-watch = {
-      description = "Poll GitHub issue searches twice daily";
+      description = "Poll GitHub issue searches";
       wantedBy = [ "timers.target" ];
       timerConfig = {
         OnCalendar = cfg.onCalendar;

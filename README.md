@@ -64,8 +64,8 @@ services.issue-watch = {
   configFile = ./issue-watch.toml;
   # Optional: root-readable file containing GH_TOKEN=...
   # environmentFile = "/run/secrets/issue-watch";
-  # Default: 08:00 and 20:00, machine's local timezone, plus up to 5m jitter.
-  # onCalendar = "*-*-* 08,20:00:00";
+  # Default: hourly, plus up to 5m jitter.
+  # onCalendar = "hourly";
 };
 ```
 
